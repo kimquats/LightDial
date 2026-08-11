@@ -1,0 +1,36 @@
+- id: '1785874079771'
+  alias: light_encoderv3
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id: sensor.kimroom_encoder
+  conditions:
+  - condition: light.is_on
+    target:
+      device_id: fe064af9b2ebfdbf99daa51968ad406f
+    options:
+      behavior: any
+  actions:
+  - metadata: {}
+    target:
+      entity_id: light.kims_room
+    data:
+      brightness_step_pct: '{{states("sensor.kimroom_encoder")|float(0.0)}}'
+    action: light.turn_on
+  mode: single
+- id: '1785890505277'
+  alias: kims room encoder board light toggle
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.kimroom_encoder_button
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    target:
+      device_id: fe064af9b2ebfdbf99daa51968ad406f
+    data:
+      transition: 3
+  mode: single

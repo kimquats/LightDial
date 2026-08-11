@@ -1,0 +1,22 @@
+mqtt:
+- sensor:
+    device:
+      identifiers:
+      - 01KY3F69MNBAG3CTE08YEPSFFS
+      name: kimroom_encoder
+    name: null
+    qos: 1.0
+    state_class: measurement
+    state_topic: home/kims_room/encoder
+    unique_id: 01KY3F69MNBAG3CTE08YEPSFFS_142d4d26db40414aae0cd9fbab042989
+    value_template: '{{ value_json.ticks }}'
+- sensor:
+    device:
+      identifiers:
+      - 01KY3F69MNBAG3CTE08YEPSFFS
+      name: kimroom_encoder
+    name: button
+    qos: 1.0
+    state_topic: home/kims_room/button
+    unique_id: 01KY3F69MNBAG3CTE08YEPSFFS_4e59da23093a48668e0ff6820c025013
+    value_template: '{{ value_json.button_pressed }}'
