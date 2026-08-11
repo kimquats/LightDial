@@ -8,7 +8,7 @@ This is not intended to be an ongoing project. This code is inelegant and amateu
 
 
 ## Components
-LightDial has 3 components: the hardware, the firmware, and some amount of configuration in HomeAssistant. This approach does not require a dedicated integration for the hardware. All of the code is written for Circuitpython 10.2 and Homeassistant 2026.7.
+LightDial has 3 components: the hardware, the firmware, and some amount of configuration in HomeAssistant. This approach does not require a dedicated Homeassistant integration for the hardware. All of the code is written for Circuitpython 10.2 and Homeassistant 2026.7.
 
 ### Hardware: 
 1. ESP32-S2 breakout board (Adafruit Qt-Py ESP32-S2)
